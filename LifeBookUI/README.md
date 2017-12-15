@@ -1,111 +1,23 @@
-# NgxEditor.Md
+## 安装nodejs
 
- Angualr4 directive for markdown editor, wrapper by [edititor.md](https://github.com/pandao/editor.md) ，original project [demo](https://pandao.github.io/editor.md/)
+下载Nodejs https://nodejs.org
 
-
-
-# Installation
-
-npm install --save ngx-editor.md
-
-# Usage
-
-**html**
-
-```html
-<div id="ed" (onComplete)="onComplate($event)" appEditorMd [editorConfig]="conf"></div>
 ```
+cd /home/oliversegal/Work/node-v8.9.0-linux-x64
 
- Use the `appEditorMd` directive on the div element and must be set `id`  ,and then you can setting the editor config use `[editorConfig]` ,the directive will emmit the editor instance by `(onComplete)` when editor create complete。
+sudo cp -r bin/* /usr/local/bin/
+sudo cp -r lib/* /usr/local/lib/
+sudo cp -r include/* /usr/local/include/
 
-**TypeScript**
-
-**app.module.ts**
-
-```typescript
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
-import {AppComponent} from './app.component';
-import {EditorMdModule} from 'ngx-editor.md';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    EditorMdModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-}
+sudo ln -s /usr/local/bin/node /usr/bin/node
+sudo ln -s /usr/local/bin/npm /usr/bin/npm
 
 ```
 
-**component.ts**
+## Install Angular
+`npm install -g @angular/cli`
 
-```typescript
-import {Component} from '@angular/core';
-import {EditorConfig} from 'ngx-editor.md';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'app';
-  conf = new EditorConfig();
-  editorInstance: any;
+## Install Bootstrap
 
-  onComplate(editorInstance: any) {
-    this.editorInstance = editorInstance;
-  }
-}
-
-```
-
-## EditorConfig
-
-**default settings**
-
-```typescript
-export class EditorConfig {
-  public width = '100%';
-  public height = '400';
-  public path = 'assets/lib/';
-  public codeFold: true;
-  public searchReplace = true;
-  public toolbar = true;
-  public emoji = true;
-  public taskList = true;
-  public tex = true;
-  public readOnly = false;
-  public tocm = true;
-  public watch = true;
-  public previewCodeHighlight = true;
-  public saveHTMLToTextarea = true;
-  public markdown = '';
-  public flowChart = true;
-  public syncScrolling = true;
-  public sequenceDiagram = true;
-  public imageUpload = true;
-  public imageFormats = ['jpg', 'jpeg', 'gif', 'png', 'bmp', 'webp'];
-  public imageUploadURL = '';
-
-  constructor() {
-  }
-}
-```
-
-# Screenshot
-
-![screentshot](demo.png)
-
-# APIS
-
-Please go to the original project , [click me](https://pandao.github.io/editor.md/examples/index.html)
-
+`npm install bootstrap@4.0.0-beta.2`
