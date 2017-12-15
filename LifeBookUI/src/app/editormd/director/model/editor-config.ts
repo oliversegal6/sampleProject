@@ -1,6 +1,6 @@
 export class EditorConfig {
   public width = '100%';
-  public height = '400';
+  public height = '500';
   public path = 'assets/lib/';
   public codeFold: true;
   public searchReplace = true;
