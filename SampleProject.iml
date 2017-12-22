@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/LifeBookUI/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/LifeBookUI/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/markdown-angular5/dist" />
       <excludeFolder url="file://$MODULE_DIR$/markdown-angular5/tmp" />
     </content>

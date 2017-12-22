@@ -22,3 +22,6 @@ sudo ln -s /usr/local/bin/npm /usr/bin/npm
 ## Install Bootstrap
 
 `npm install bootstrap@4.0.0-beta.2`
+
+## Install zTree
+
