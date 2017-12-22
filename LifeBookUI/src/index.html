@@ -10,13 +10,31 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/ztree/demo.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+  <script type="text/javascript" src="assets/lib/ztree/jquery-1.4.4.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/lib/ztree/jquery.ztree.core.js"></script>
+  <SCRIPT LANGUAGE="JavaScript">
+    var $jq144 = $.noConflict();
+    var zTreeObj;
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {};
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+      {name:"test1", open:true, children:[
+          {name:"test1_1"}, {name:"test1_2"}]},
+      {name:"test2", open:true, children:[
+          {name:"test2_1"}, {name:"test2_2"}]}
+    ];
+
+    $jq144(document).ready(function(){
+      zTreeObj = $jq144.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+  </SCRIPT>
 </head>
 <body>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
-
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col">
@@ -25,7 +43,7 @@
     </div>
     <div class="row clearfix">
       <div class="col-md-2">
-        1 of 3
+        <ul id="treeDemo" class="ztree"></ul>
       </div>
       <div class="col-md-10">
         <app-root></app-root>
